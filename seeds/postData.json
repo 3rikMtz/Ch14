@@ -1,14 +1,12 @@
 [
   {
-    "name": "Travel Planner Pro",
-    "description": "An all-in-one mobile app that helps you plan your trips, book accommodations, and discover exciting destinations."
+    "post_title": "Learning JavaScript",
+    "post_content": "I'm enjoying the process of learning JavaScript!",
+    "user_id": "1"
   },
   {
-    "name": "Code Master Challenge",
-    "description": "A comprehensive web app that offers users daily coding challenges, tracks their coding skills, and provides detailed analysis."
-  },
-  {
-    "name": "Space Adventure",
-    "description": "Embark on an intergalactic journey in this Windows and macOS game, where players explore distant planets and overcome cosmic challenges."
+    "post_title": "Asynchronous JavaScript",
+    "post_content": "Async operations can be quite tricky to handle.",
+    "user_id": "2"
   }
 ]

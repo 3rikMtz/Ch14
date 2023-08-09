@@ -5,43 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechBlog!</title>
+    <title>🚀TechBlog🚀</title>
+    <link rel="stylesheet" href="/css/tails.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="title">
-            <span> 
-                🚀TechBlog 🚀
-            </span>
-        </h1>
-        <nav>
-            <div>
+    <header class="bg-dark pb-2" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg text-center">
+            <div class="container fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Home</a>
+                        <a class="nav-link active" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard" class="nav-link">Dashboard</a>
+                        <a class="nav-link" href="/home">Dashboard</a>
                     </li>
                     {{#if logged_in}}
-                        <li class="nav-item"><a href="#" id="logout" class="nav-link">Logout</a></li>
+                    <li class="nav-item">
+                        <button type="button" class="class btn btn-link bg-dark" id="logout">Logout</button>
+                    </li> 
                     {{else}}
-                        <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login" id="login">Login</a>
+                    </li>
                     {{/if}}
-                </ul>
+                </ul>    
             </div>
         </nav>
+        <div class="container text-center position-relative">
+            <h1 class="pb-1 fluid main-title bg-white">The Tech Blog</h1>
+        </div>
+    </header>
+    <div class="main-content bg-warning-subtle pt-2">
+        <main>
+            {{{ body }}}
+        </main>
     </div>
-    <div>
-        {{{ body }}}
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3f7bdb791a.js" crossorigin="anonymous"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
-{{#if logged_in}}
-<script src="js/logout.js"></script>
-{{/if}}
-
-
-
+</html>

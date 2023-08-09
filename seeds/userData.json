@@ -1,18 +1,19 @@
 [
-    {
-      "name": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "password": "P@ssw0rd1"
-    },
-    {
-      "name": "Bob Smith",
-      "email": "bob.smith@example.com",
-      "password": "S3cur3P@ssword"
-    },
-    {
-      "name": "Eve Anderson",
-      "email": "eve.anderson@example.com",
-      "password": "MyStrongP@ss"
-    }
-  ]
+  {
+    "username": "JohnDoe",
+    "email": "johnDoe.cobos@outlook.es",
+    "password": "password12345"
+  },
+  {
+    "username": "TechGuru",
+    "email": "lernantino@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "CodingNinja",
+    "email": "amiko2k20@aol.com",
+    "password": "password12345"
+  }
+]
+
   

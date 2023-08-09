@@ -1,17 +1,66 @@
-<div class="post" data-post-id="{{post.id}}">
-  <h2>{{post.name}}</h2>
-  <p>{{post.description}}</p>
-  <div class="post-details">
-    <p class="created-by">Created by: {{post.user.name}}</p>
-    <p class="created-on">Created on {{format_date post.date_created}}</p>
-  </div>
+<div class="post container border border-black" id="current-post" data-post-id= {{post.id}} >
+    <div class="content">
+        <div class="row bg-dark">
+            <div class="col">
+                <h2 class="post-title text-light"> 
+                    {{post.post_title}}
+                </h2>  
+            </div>
+            <div class="col post-creator d-flex justify-content-end">
+                <p>Posted by {{post.user.username}} on {{format_date post.date_created}} </p>
+            </div>
+        </div>
+        <div>
+            <p>
+                {{post.post_content}}
+            </p>
+        </div>
+    </div>
 </div>
-<h3>Comments:</h3>
-{{#each post.comments as |comment|}}
-  <div class="comment">
-    <p>{{comment.text}}</p>
-    <p>Posted by: {{comment.user.name}}</p>
-  </div>
+
+{{#each comments as |comment|}}
+    <div class="container border border-primmary border-2 my-4">
+        <div class="content">
+            <div class="row bg-dark-subtle">
+                <div class="col">
+                    <h4 class="text-dark">
+                        {{comment.user.username}}
+                    </h4>
+                </div>
+                <div class="col text-dark d-flex justify-content-end">
+                    <p style="font-size: 13px;"> {{format_date comment.date_create}} </p>
+                </div>
+            </div>
+            <div>
+                <p> {{comment.content}} </p>
+            </div>
+        </div>
+    </div>
 {{/each}}
 
-<script src="./js/post.js"></script>
+{{#if logged_in}}
+<div class="container d-flex justify-content-center my-3">
+    <div class=""> 
+        <button type="button" id="new-comment">+ New Comment</button>
+    </div>
+</div>
+{{/if}}
+
+<div id="hidden-div" style="display: none">
+    <div id="comment-form" class="form container border border-black border-3 my-3">
+        <div class="row ">
+            <div class="bg-dark"><h2>j</h2></div>
+            <form action="new-comment" id="new-comment-form">
+            <label for="comment">Comment</label>
+            <div class="mb-2">
+                <textarea id="content" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/newCom.js"></script>

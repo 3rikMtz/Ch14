@@ -1,24 +1,23 @@
-<div class="signUpBackground">
-  <div class="login-box">
-    <h2>Login</h2>
-    <form action="/login" method="POST" class="login-form">
-      <div class="user-box">
-        <input type="email" name="email" id="email-login" required>
-        <label>Email</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="password" id="password-login" required>
-        <label>Password</label>
-      </div>
-      <button type="submit">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </button>
-    </form>
-    <p class="sign-up">Don't have an account? <a href="/signup">Sign Up</a></p>
-  </div>
+<div class="position-relative logFrm text-light">
+    <div class="px-2 bg-dark position-absolute top-50 start-50 translate-middle">
+        <div>
+            <form action="signup" id="login-form">
+                <h2>Log in </h2>
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input id="username-login" class="form-control" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password-login" type="password" class="form-control">
+                </div>
+                <div class="d-flex justify-content-center pb-2">
+                    <button type="submit" class="btn btn-light">Log in </button>
+                </div>
+                <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="/signup">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
 </div>
-<script src="./js/login.js"></script>
+
+<script src="/js/login.js"></script>
